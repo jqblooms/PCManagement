@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PC Management</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="launcher.css">
+  <script type="module" src="launcher.js"></script>
+</head>
+<body>
+  <main class="card">
+    <div class="brand"><img src="favicon.svg" alt="" width="28" height="28">PC Management</div>
+
+    <section id="checking" aria-live="polite">
+      <p class="muted">Finding the classroom server…</p>
+    </section>
+
+    <section id="ready" hidden>
+      <p class="muted" id="readyText"></p>
+      <a id="openButton" class="primary" href="#">Open PC Management</a>
+      <p class="note">This only works on the school network. The first time, your browser warns that the
+        connection is not private, because the server uses its own certificate. Choose
+        <strong>Advanced</strong> and then <strong>Continue</strong>.</p>
+      <details id="otherLinks" hidden>
+        <summary>Other addresses for this server</summary>
+        <ul id="otherList"></ul>
+      </details>
+    </section>
+
+    <section id="none" hidden>
+      <p class="error" id="noneText">No classroom server has checked in recently.</p>
+      <p class="muted">File servers report their address every five minutes. Check that a file server is
+        switched on and connected, then reload this page.</p>
+    </section>
+
+    <section id="servers" hidden>
+      <h2>Servers</h2>
+      <ul id="serverList" class="servers"></ul>
+    </section>
+  </main>
+</body>
+</html>

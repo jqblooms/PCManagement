@@ -1,0 +1,33 @@
+:root {
+  --bg: #1e1e2e; --panel: #181825; --raised: #232336; --border: #313244;
+  --text: #cdd6f4; --muted: #9399b2; --blue: #89b4fa; --red: #f38ba8; --green: #a6e3a1; --yellow: #f9e2af;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; margin: 0; }
+body {
+  background: var(--bg); color: var(--text); font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  display: grid; place-items: center; padding: 16px; min-height: 100vh;
+}
+[hidden] { display: none !important; }
+.card { width: min(460px, 100%); background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 600; margin-bottom: 14px; }
+.brand img { display: block; }
+.muted { color: var(--muted); }
+.error { color: var(--red); }
+.note { color: var(--muted); font-size: 13px; margin-top: 16px; }
+.primary {
+  display: block; text-align: center; text-decoration: none; margin-top: 14px; padding: 11px 14px;
+  background: var(--blue); color: #11111b; font-weight: 600; border-radius: 8px;
+}
+.primary:hover { filter: brightness(1.08); }
+.primary:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+details { margin-top: 12px; color: var(--muted); font-size: 13px; }
+details a { color: var(--blue); overflow-wrap: anywhere; }
+h2 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin: 24px 0 8px; }
+.servers { list-style: none; margin: 0; padding: 0; }
+.servers li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border); font-size: 14px; }
+.servers .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); flex: none; }
+.servers .dot.fresh { background: var(--green); }
+.servers .role { color: var(--muted); font-size: 12px; border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
+.servers .seen { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
